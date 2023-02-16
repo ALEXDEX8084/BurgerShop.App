@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BurgerShop.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0">
+            <Label Text="Тип мяса:"/>
+            <Border Stroke="#ffd919" StrokeThickness="2">
+                <Picker x:Name="IngridientPicker"
+                SelectedIndexChanged="IngridientPicker_SelectedIndexChanged" WidthRequest="200">
+                    <Picker.Items>
+                        <x:String>Курица</x:String>
+                        <x:String>Говядина</x:String>
+                        <x:String>Свинина</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Border>
+
+            
+            <Label Text="Дополнительно:" Margin="0,30,0,20"/>
+            <HorizontalStackLayout>
+                <Border Stroke="#ffd919" StrokeThickness="2" StrokeShape="Ellipse" HorizontalOptions="Center">
+                    <Image Source="salad.png" WidthRequest="60" HeightRequest="60" Margin="10" Aspect="AspectFill" />
+                </Border>
+                <VerticalStackLayout>
+                    <Label Text="Салат" Margin="10"/>
+                    <Label Text="10" Margin="10"/>
+                </VerticalStackLayout>
+                <HorizontalStackLayout Margin="73,0,0,0">
+                    <Button WidthRequest="40" HeightRequest="40" Text="-" Margin="20" TextColor="{StaticResource Key=textColor}"/>
+                    <Label x:Name="SaladCounttext" Text="0" Margin="0, 30, 0 , 0"/>
+                    <Button WidthRequest="40" HeightRequest="40" Text="+" Margin="20" TextColor="{StaticResource Key=textColor}"/>
+                </HorizontalStackLayout>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Border Stroke="#ffd919" StrokeThickness="2" StrokeShape="Ellipse" HorizontalOptions="Center">
+                    <Image Source="salad.png" WidthRequest="60" HeightRequest="60" Margin="10" Aspect="AspectFill" />
+                </Border>
+                <VerticalStackLayout>
+                    <Label Text="Помидор" Margin="10"/>
+                    <Label Text="10" Margin="10"/>
+                </VerticalStackLayout>
+                <HorizontalStackLayout Margin="50,0,0,0">
+                    <Button WidthRequest="40" HeightRequest="40" Text="-" Margin="20" TextColor="{StaticResource Key=textColor}"/>
+                    <Label x:Name="TomatoCounttext" Text="0" Margin="0, 30, 0 , 0"/>
+                    <Button WidthRequest="40" HeightRequest="40" Text="+" Margin="20" TextColor="{StaticResource Key=textColor}"/>
+                </HorizontalStackLayout>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Border Stroke="#ffd919" StrokeThickness="2" StrokeShape="Ellipse" HorizontalOptions="Center">
+                    <Image Source="salad.png" WidthRequest="60" HeightRequest="60" Margin="10" Aspect="AspectFill" />
+                </Border>
+                <VerticalStackLayout>
+                    <Label Text="Лук" Margin="10"/>
+                    <Label Text="10" Margin="10"/>
+                </VerticalStackLayout>
+                <HorizontalStackLayout Margin="88,0,0,0">
+                    <Button WidthRequest="40" HeightRequest="40" Text="-" Margin="20" TextColor="{StaticResource Key=textColor}"/>
+                    <Label x:Name="OnionCounttext" Text="0" Margin="0, 30, 0 , 0"/>
+                    <Button WidthRequest="40" HeightRequest="40" Text="+" Margin="20" TextColor="{StaticResource Key=textColor}"/>
+                </HorizontalStackLayout>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Border Stroke="#ffd919" StrokeThickness="2" StrokeShape="Ellipse" HorizontalOptions="Center">
+                    <Image Source="salad.png" WidthRequest="60" HeightRequest="60" Margin="10" Aspect="AspectFill" />
+                </Border>
+                <VerticalStackLayout>
+                    <Label Text="Огурец" Margin="10"/>
+                    <Label Text="10" Margin="10"/>
+                </VerticalStackLayout>
+                <HorizontalStackLayout Margin="65,0,0,0">
+                    <Button WidthRequest="40" HeightRequest="40" Text="-" Margin="20" TextColor="{StaticResource Key=textColor}"/>
+                    <Label x:Name="PickleCounttext" Text="0" Margin="0, 30, 0 , 0"/>
+                    <Button WidthRequest="40" HeightRequest="40" Text="+" Margin="20" TextColor="{StaticResource Key=textColor}"/>
+                </HorizontalStackLayout>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <VerticalStackLayout>
+                    <Label Text="Количество:" Margin="10,35,0,0"/>
+                </VerticalStackLayout>
+                <HorizontalStackLayout Margin="125,0,0,0">
+                    <Button WidthRequest="40" HeightRequest="40" Text="-" Margin="20" TextColor="{StaticResource Key=textColor}"/>
+                    <Label x:Name="CountCounttext" Text="0" Margin="0, 30, 0 , 0"/>
+                    <Button WidthRequest="40" HeightRequest="40" Text="+" Margin="20" TextColor="{StaticResource Key=textColor}"/>
+                </HorizontalStackLayout>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="Итого:  "/>
+                <Label x:Name="ItogCounttext" Text="Итого:" FontAttributes="Bold"/>
+            </HorizontalStackLayout>
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" TextColor="{StaticResource Key=textColor}"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
